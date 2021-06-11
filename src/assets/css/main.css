@@ -1,0 +1,467 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Crimson+Pro:wght@200&family=Dancing+Script&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(0, 100%, 50%);
+  --clr-primary-2: hsl(0, 100%, 32%);
+  --clr-primary-5: #ff0000;
+  /* lighter shades of primary color */
+  --clr-primary-6: rgba(243, 181, 181, 0.333);
+  --clr-primary-7: hsl(0, 65%, 59%);
+  --clr-primary-8: hsl(0, 80%, 74%);
+  --clr-primary-9: hsl(0, 94%, 87%);
+  --clr-primary-10: hsl(0, 100%, 94%);
+  --clr-white: #fff;
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(0, 61%, 16%);
+  --clr-grey-3: hsl(0, 35%, 30%);
+  --clr-grey-4: hsl(0, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(0, 22%, 49%);
+  --clr-grey-8: hsl(0, 31%, 80%);
+  --clr-grey-9: hsl(0, 32%, 89%);
+  --clr-grey-10: hsl(0, 33%, 96%);
+  --clr-green-dark: hsl(0, 67%, 35%);
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --ff-primary: "Bodoni Moda", serif;
+  --ff-secondary: "Crimson Pro", serif;
+  --ff-third: "Dancing Script", cursive;
+  --spacing: 0.2rem;
+  --transition: 0.3s linear;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  margin-top: 5rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-3);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/* social links */
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+}
+.social-links,
+.footer-links,
+.sidebar-icons {
+  margin-top: 2rem;
+  width: 15rem;
+}
+.social-link {
+  font-size: 1.75rem;
+  margin: 1rem;
+  color: var(--clr-grey-1);
+  transition: var(--transition);
+}
+.social-link:hover {
+  color: var(--clr-primary-5);
+}
+
+/*  global classes */
+.btn {
+  text-transform: uppercase;
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-9);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  color: var(--clr-primary-1);
+  background: var(--clr-primary-8);
+}
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  z-index: 200;
+  background: var(--clr-white);
+}
+.nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-header h1 {
+  margin: 0;
+  color: var(--clr-primary-1);
+}
+.toggle-btn {
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.toggle-btn:hover {
+  color: var(--clr-primary-5);
+}
+.nav-links {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .toggle-btn {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-links a {
+    margin-right: 2rem;
+    text-transform: capitalize;
+    color: var(--clr-grey-1);
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+    padding: 0.5rem 0;
+  }
+  .nav-links a:hover {
+    color: var(--clr-primary-5);
+    box-shadow: 1.5px 3px var(--clr-primary-6);
+  }
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+}
+
+/*
+=============== 
+Sidebar
+===============
+*/
+.sidebar {
+  background: var(--clr-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.show-sidebar {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sidebar-links li {
+  opacity: 0;
+}
+.sidebar-links li a {
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--clr-grey-1);
+  letter-spacing: var(--spacing);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.sidebar-links li a:hover {
+  box-shadow: 1.5px 3px var(--clr-primary-6);
+  color: var(--clr-primary-5);
+}
+.close-btn {
+  position: absolute;
+  right: 2.5%;
+  top: 2.5%;
+  font-size: 2.5rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.close-btn:hover {
+  color: var(--clr-primary-5);
+}
+@media screen and (min-width: 992px) {
+  .sidebar {
+    transform: translateY(-100%);
+  }
+}
+/*
+=============== 
+Sidebar Animation
+===============
+*/
+.sidebar-links li {
+  animation: slideRight 0.5s ease-in-out forwards;
+}
+.sidebar-links li:nth-of-type(1) {
+  animation-delay: 0.25s;
+}
+.sidebar-links li:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+.sidebar-links li:nth-of-type(3) {
+  animation-delay: 0.75s;
+}
+.sidebar-links li:nth-of-type(4) {
+  animation-delay: 1s;
+}
+.sidebar-links li:nth-of-type(5) {
+  animation-delay: 1.25s;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.sidebar-icons li {
+  opacity: 0;
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+.sidebar-icons li a {
+  color: var(--clr-grey-1);
+}
+.sidebar-icons li:nth-of-type(1) {
+  animation-delay: 0.25s;
+}
+.sidebar-icons li:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*
+=============== 
+Hero
+===============
+*/
+/* underline added to globals */
+.hero {
+  margin-top: 5rem;
+  height: 100vh;
+  background-image: url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-center {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+.hero-info {
+  margin-top: 20rem;
+}
+
+.hero-info h4 span {
+  color: var(--clr-grey-1);
+  background: rgba(255, 155, 155, 0.25);
+}
+.hero-icons {
+  justify-items: flex-start;
+}
+.hero .btn {
+  margin-top: 1.25rem;
+}
+
+.hero-img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background: var(--clr-primary-10);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 70%;
+    right: 0;
+    bottom: 0;
+    background: var(--clr-white);
+  }
+  .hero-center {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .hero-info {
+    margin-top: 5rem;
+    grid-row: 1/1;
+    grid-column: 1 / span 8;
+  }
+  .hero-img {
+    display: block;
+    height: 100vh;
+    grid-row: 1/1;
+    grid-column: 7/-1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero h4 {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .hero h4 {
+    font-size: 1rem;
+  }
+  .hero h4 {
+    line-height: 1;
+  }
+}
+
+/*
+===============
+Footer
+===============
+*/
+.footer {
+  height: 10rem;
+  background: var(--clr-white);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  margin-bottom: 2rem;
+}
+.footer h4 {
+  margin-top: 0.5rem;
+  color: var(--clr-grey-1);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.footer h4 span {
+  color: var(--clr-primary-1);
+}
+.footer-links,
+.sidebar-icons {
+  display: flex;
+  justify-content: center;
+}
