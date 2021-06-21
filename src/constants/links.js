@@ -21,6 +21,11 @@ const data = [
   },
   {
     id: 5,
+    text: "resume",
+    url: "/resume/",
+  },
+  {
+    id: 6,
     text: "contact",
     url: "/contact/",
   },

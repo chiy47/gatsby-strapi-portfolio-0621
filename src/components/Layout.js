@@ -1,8 +1,8 @@
 import React, { useState } from "react"
+import "../assets/css/main.css"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import Sidebar from "./Sidebar"
-import "../assets/css/main.css"
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
