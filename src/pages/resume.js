@@ -5,7 +5,7 @@ import Title from "../components/Title"
 
 const Resume = ({ data }) => {
   const {
-    allStrapiJobs: { nodes: jobs },
+    allStrapiJob: { nodes: jobs },
   } = data
   const [value, setValue] = useState(0)
   const { company, position, date, desc } = jobs[value]
@@ -47,7 +47,7 @@ const Resume = ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiJobs(sort: { order: DESC, fields: strapiId }) {
+    allStrapiJob(sort: { order: DESC, fields: strapiId }) {
       nodes {
         company
         date

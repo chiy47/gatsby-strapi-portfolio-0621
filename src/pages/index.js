@@ -7,7 +7,7 @@ const Home = ({ data }) => {
   console.log(data)
 
   const {
-    allStrapiProjects: { nodes: projects },
+    allStrapiProject: { nodes: projects },
   } = data
   return (
     <>
@@ -19,7 +19,7 @@ const Home = ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiProjects(filter: { featured: { eq: true } }) {
+    allStrapiProject(filter: { featured: { eq: true } }) {
       nodes {
         desc
         featured

@@ -1,18 +1,17 @@
 import React from "react"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FaGithub, FaShare } from "react-icons/fa"
 
 const Project = ({ title, desc, github, url, image, stack, index }) => {
   return (
-    <article className="project">
+    <div className="project">
       <GatsbyImage
-        image={getImage(image)}
+        image={image.localFile.childImageSharp.gatsbyImageData}
         alt={title}
         className="project-img"
       />
       <div className="project-info">
-        <span className="project-number">0{index + 1}.</span>
-        <h3>{title}</h3>
+        <h3 className="project-title">{title}</h3>
         <p className="project-desc">{desc}</p>
         <div className="project-stack">
           {stack.map(item => {
@@ -28,7 +27,7 @@ const Project = ({ title, desc, github, url, image, stack, index }) => {
           </a>
         </div>
       </div>
-    </article>
+    </div>
   )
 }
 
