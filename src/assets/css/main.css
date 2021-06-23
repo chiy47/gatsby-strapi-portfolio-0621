@@ -390,7 +390,6 @@ Hero
 .hero-info {
   margin-top: 20rem;
 }
-
 .hero-info h4 span {
   color: var(--clr-grey-1);
   background: rgba(255, 155, 155, 0.25);
@@ -401,7 +400,6 @@ Hero
 .hero .btn {
   margin-top: 1.25rem;
 }
-
 .hero-img {
   display: none;
 }
@@ -451,6 +449,40 @@ Hero
 }
 
 /*
+===============
+About Page
+===============
+*/
+.about-img {
+  margin-bottom: 2rem;
+  height: 25rem;
+  width: 100%;
+  display: block;
+}
+.about-text {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.about-text p {
+  line-height: 2;
+}
+@media screen and (min-width: 768px) {
+  .about-center {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .about-img {
+    grid-column: 1 / span 5;
+    margin-bottom: 0;
+  }
+  .about-text {
+    grid-column: 6 / -1;
+  }
+}
+
+/*
 =============== 
 Jobs
 ===============
@@ -458,8 +490,9 @@ Jobs
 .jobs-center {
   width: 80vw;
   margin: 0 auto;
+  text-align: center;
 }
-.btn-container {
+.job-btn-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -589,6 +622,63 @@ Projects
   }
 }
 @media screen and (min-width: 992px) {
+}
+
+/*
+===============
+Contact Page
+===============
+*/
+.contact-img {
+  margin-bottom: 2rem;
+  height: 25rem;
+  width: 100%;
+  display: block;
+}
+.contact-form {
+  background: var(--clr-white);
+  text-align: center;
+  transition: var(--transition);
+}
+.contact-form h3 {
+  padding-top: 1.25rem;
+  color: var(--clr-grey-5);
+}
+.form-group {
+  padding: 1rem 1.5rem;
+}
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: var(--clr-grey-10);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.form-control::placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.form-container button {
+  text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  .contact-center {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .contact-img {
+    grid-column: 1 / span 5;
+    margin-bottom: 0;
+  }
+  .contact-form {
+    grid-column: 6 / -1;
+  }
 }
 
 /*

@@ -11,12 +11,14 @@ const Projects = ({ projects, title, showLink }) => {
         {projects.map((project, index) => {
           return <Project key={project.id} index={index} {...project} />
         })}
+        <div className="btn-container">
+          {showLink && (
+            <Link to="/projects" className="btn">
+              More Projects
+            </Link>
+          )}
+        </div>
       </div>
-      {showLink && (
-        <Link to="/projects" className="btn center-btn">
-          More Projects
-        </Link>
-      )}
     </section>
   )
 }
