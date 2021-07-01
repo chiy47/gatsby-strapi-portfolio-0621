@@ -14,6 +14,7 @@ const Hero = () => {
           </h4>
           <Link to="/contact" className="btn">
             Contact Me
+            <i class="arrow right"></i>
           </Link>
           <div className="social-links">
             {socialLinks.map(link => {

@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { FaCircle } from "react-icons/fa"
 import { useStaticQuery, graphql } from "gatsby"
 import Title from "./Title"
 
@@ -47,10 +46,9 @@ const Experience = () => {
           <p className="job-date">{date}</p>
           {desc.map(item => {
             return (
-              <div key={item.id} className="job-desc">
-                <FaCircle className="job-icon"></FaCircle>
-                <p>{item.name}</p>
-              </div>
+              <ul key={item.id} className="job-desc">
+                <li>{item.name}</li>
+              </ul>
             )
           })}
         </article>

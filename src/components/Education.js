@@ -1,5 +1,4 @@
 import React from "react"
-import { FaCircle } from "react-icons/fa"
 import { useStaticQuery, graphql } from "gatsby"
 import Title from "./Title"
 

@@ -4,7 +4,7 @@ import { FaGithub, FaShare } from "react-icons/fa"
 
 const Project = ({ title, desc, github, url, image, stack, index }) => {
   return (
-    <div className="project">
+    <article className="project">
       <GatsbyImage
         image={image.localFile.childImageSharp.gatsbyImageData}
         alt={title}
@@ -27,7 +27,7 @@ const Project = ({ title, desc, github, url, image, stack, index }) => {
           </a>
         </div>
       </div>
-    </div>
+    </article>
   )
 }
 

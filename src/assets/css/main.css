@@ -31,7 +31,7 @@ Variables
   --clr-grey-8: hsl(0, 31%, 80%);
   --clr-grey-9: hsl(0, 32%, 89%);
   --clr-grey-10: hsl(0, 33%, 96%);
-  --clr-green-dark: hsl(0, 67%, 35%);
+  --clr-blue-dark: hsl(251, 22%, 34%);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --ff-primary: "Bodoni Moda", serif;
@@ -60,9 +60,6 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;
-}
-ul {
-  list-style-type: none;
 }
 a {
   text-decoration: none;
@@ -156,9 +153,35 @@ p {
   cursor: pointer;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
+.arrow {
+  border: solid var(--clr-primary-9);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  position: relative;
+  animation: myfirst 2s infinite;
+  animation-direction: normal;
+}
+.right {
+  transform: rotate(-45deg);
+}
 .btn:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-8);
+}
+
+/*
+=============== 
+Arrow Animation
+===============
+*/
+@keyframes myfirst {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: 7px;
+  }
 }
 
 /* section */
@@ -176,6 +199,9 @@ p {
 .section-title {
   margin-bottom: 4rem;
   text-align: center;
+}
+.section-title h2 {
+  font-weight: 100;
 }
 
 /*
@@ -622,6 +648,91 @@ Projects
   }
 }
 @media screen and (min-width: 992px) {
+}
+
+/*
+=============== 
+Blogs
+===============
+*/
+.blogs {
+  background: var(--clr-white);
+}
+.blogs-center {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.blog {
+  margin-bottom: 4rem;
+  box-shadow: 5px 10px 8px var(--clr-primary-10);
+  transition: var(--transition);
+}
+.blog:hover {
+  transform: scale(1.025);
+}
+.blog-card {
+  background: var(--clr-white);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.blog-title,
+.blog-page-title {
+  font-weight: 100;
+  color: var(--clr-blue-dark);
+}
+.blog-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.blog-header p {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.blog-icon {
+  color: var(--clr-grey-1);
+  font-size: 0.785rem;
+  margin-right: 0.35rem;
+}
+.blog-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+.blog-footer p {
+  display: inline-block;
+  background: var(--clr-grey-9);
+  color: var(--clr-grey-5);
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+.blog-img {
+  max-width: 100%;
+}
+.blog-template-page {
+  text-align: center;
+}
+.blog-page-title {
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 576px) {
+  .blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .blog {
+    grid-template-columns: 0.75fr 0.5fr;
+  }
 }
 
 /*

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FaAlignJustify } from "react-icons/fa"
+import { FaAlignCenter } from "react-icons/fa"
 import pageLinks from "../constants/links"
 
 const Navbar = ({ toggleSidebar }) => {
@@ -10,7 +10,7 @@ const Navbar = ({ toggleSidebar }) => {
         <div className="nav-header">
           <h1>Chi</h1>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
-            <FaAlignJustify />
+            <FaAlignCenter />
           </button>
         </div>
         <div className="nav-links">
