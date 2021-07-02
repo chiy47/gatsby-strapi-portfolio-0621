@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { FaPenFancy, FaCalendar } from "react-icons/fa"
+import { FaPenAlt, FaCalendar } from "react-icons/fa"
 import PropTypes from "prop-types"
 
 const Blog = ({ id, title, image, date, category, slug, desc, author }) => {
@@ -21,7 +21,7 @@ const Blog = ({ id, title, image, date, category, slug, desc, author }) => {
               {date}
             </p>
             <p>
-              <FaPenFancy className="blog-icon"></FaPenFancy>
+              <FaPenAlt className="blog-icon"></FaPenAlt>
               {author}
             </p>
           </div>

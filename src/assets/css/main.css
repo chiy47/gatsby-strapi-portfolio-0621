@@ -92,6 +92,9 @@ p {
   color: var(--clr-grey-3);
   font-size: 0.85rem;
 }
+ul {
+  list-style-type: none;
+}
 
 @media screen and (min-width: 800px) {
   h1 {
@@ -566,8 +569,9 @@ Jobs
   column-gap: 0.5rem;
   align-items: center;
   margin-bottom: 1.25rem;
+  list-style-type: initial;
 }
-.job-desc p {
+.job-desc li {
   margin-bottom: 0;
   color: var(--clr-grey-3);
 }
@@ -680,13 +684,15 @@ Blogs
   font-weight: 100;
   color: var(--clr-blue-dark);
 }
-.blog-header {
+.blog-header,
+.blog-info-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.blog-header p {
+.blog-header p,
+.blog-info-container p {
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
@@ -695,14 +701,16 @@ Blogs
   font-size: 0.785rem;
   margin-right: 0.35rem;
 }
-.blog-footer {
+.blog-footer,
+.blog-category-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
 }
-.blog-footer p {
+.blog-footer p,
+.blog-category-container p {
   display: inline-block;
   background: var(--clr-grey-9);
   color: var(--clr-grey-5);
@@ -712,14 +720,18 @@ Blogs
   letter-spacing: 2px;
   font-size: 0.85rem;
 }
-.blog-img {
+.blog-img,
+.blog-page-img {
   max-width: 100%;
 }
 .blog-template-page {
   text-align: center;
 }
-.blog-page-title {
+.blog-page-header {
   margin-bottom: 4rem;
+}
+.blog-page-desc {
+  margin: 2rem auto;
 }
 
 @media screen and (min-width: 576px) {
@@ -818,4 +830,16 @@ Footer
 .sidebar-icons {
   display: flex;
   justify-content: center;
+}
+
+/*
+=============== 
+Error
+===============
+*/
+.error-center {
+  text-align: center;
+}
+.error-center h2 {
+  font-weight: 100;
 }
