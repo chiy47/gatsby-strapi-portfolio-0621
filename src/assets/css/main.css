@@ -455,7 +455,7 @@ Hero
     grid-column: 1 / span 8;
   }
   .hero-img {
-    display: block;
+    display: grid;
     height: 100vh;
     grid-row: 1/1;
     grid-column: 7/-1;

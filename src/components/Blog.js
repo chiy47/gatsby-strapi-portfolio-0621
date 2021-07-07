@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { FaPenAlt, FaCalendar } from "react-icons/fa"
-import PropTypes from "prop-types"
 
 const Blog = ({ id, title, image, date, category, slug, desc, author }) => {
   return (
@@ -34,7 +33,5 @@ const Blog = ({ id, title, image, date, category, slug, desc, author }) => {
     </Link>
   )
 }
-
-Blog.propTypes = {}
 
 export default Blog
