@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Hero from "../components/Hero"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
+import Seo from "../components/Seo"
 
 const Home = ({ data }) => {
   console.log(data)
@@ -13,6 +14,7 @@ const Home = ({ data }) => {
   } = data
   return (
     <>
+      <Seo title="Home" />
       <Hero />
       <Projects projects={projects} title="projects" showLink />
       <Blogs blogs={blogs} title="blogs" showLink />

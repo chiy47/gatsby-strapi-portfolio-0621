@@ -403,21 +403,10 @@ Hero
 */
 /* underline added to globals */
 .hero {
-  margin-top: 5rem;
-  height: 100vh;
-  background-image: url(../images/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-.hero-center {
-  height: 100%;
-  display: grid;
-  align-items: center;
+  background: var(--clr-primary-10);
 }
 .hero-info {
-  margin-top: 20rem;
+  margin-top: 4rem;
 }
 .hero-info h4 span {
   color: var(--clr-grey-1);
@@ -430,33 +419,30 @@ Hero
   margin-top: 1.25rem;
 }
 .hero-img {
-  display: none;
+  display: block;
+  height: 90vh;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .hero-img {
+    height: 100vh;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .hero {
-    background: var(--clr-primary-10);
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 70%;
-    right: 0;
-    bottom: 0;
-    background: var(--clr-white);
-  }
   .hero-center {
+    height: 100%;
+    display: grid;
+    align-items: center;
     grid-template-columns: repeat(12, 1fr);
   }
   .hero-info {
-    margin-top: 5rem;
     grid-row: 1/1;
     grid-column: 1 / span 8;
   }
   .hero-img {
-    display: grid;
-    height: 100vh;
+    height: 110vh;
     grid-row: 1/1;
     grid-column: 7/-1;
   }

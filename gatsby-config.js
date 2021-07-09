@@ -7,10 +7,11 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Chi Portfolio`,
-    description: `Chi Portfolio built with Gatsby and Strapi`,
-    titleTemplate: `%s | Chi Portfolio`,
-    image: `/hero.png`,
+    title: `Web Developer Portfolio`,
+    description: `Web Developer Portfolio built with Gatsby and Strapi`,
+    titleTemplate: `%s | Web Developer Portfolio`,
+    url: `https://temp-web-developer-portfolio.netlify.app/`,
+    image: `/main.png`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -23,6 +24,7 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-strapi`,
       options: {

@@ -1,17 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
+import Seo from "../components/Seo"
 
 const blogs = ({ data }) => {
   const {
     allStrapiBlog: { nodes: blogs },
   } = data
   return (
-    <main>
-      <section className="blogs-page">
-        <Blogs title="Blogs" blogs={blogs} />
-      </section>
-    </main>
+    <>
+      <Seo title="Blogs" />
+      <main>
+        <section className="blogs-page">
+          <Blogs title="Blogs" blogs={blogs} />
+        </section>
+      </main>
+    </>
   )
 }
 

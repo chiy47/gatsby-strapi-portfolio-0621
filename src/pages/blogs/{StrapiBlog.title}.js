@@ -1,10 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { FaPenAlt, FaCalendar } from "react-icons/fa"
+import Seo from "../../components/Seo"
 
 const BlogTemplate = ({ pageContext: { title }, data }) => {
   return (
     <>
+      <Seo
+        title={data.strapiBlog.title}
+        description={data.strapiBlog.desc}
+        image={data.strapiBlog.image.publicURL}
+      />
       <main className="section blog-template-page">
         <div className="blog-page-header">
           <h2 className="blog-page-title">{title}</h2>

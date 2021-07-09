@@ -7,6 +7,13 @@ const Hero = () => {
   return (
     <header className="hero">
       <section className="section-center hero-center">
+        <StaticImage
+          src="../assets/images/hero-1.jpg"
+          alt="portfolio"
+          className="hero-img"
+          placeholder="blurred"
+          layout="constrained"
+        />
         <article className="hero-info">
           <h1>I'm Chi</h1>
           <h4>
@@ -31,13 +38,6 @@ const Hero = () => {
             })}
           </div>
         </article>
-        <StaticImage
-          src="../assets/images/hero.jpg"
-          alt="portfolio"
-          className="hero-img"
-          placeholder="blurred"
-          layout="constrained"
-        />
       </section>
     </header>
   )
