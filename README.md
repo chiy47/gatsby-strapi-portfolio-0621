@@ -1,3 +1,5 @@
+This portfolio is built with Gatsby V3 and Strapi. 
+Portfolio link: chiquynhduong.com
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
