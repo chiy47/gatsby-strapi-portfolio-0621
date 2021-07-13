@@ -8,7 +8,7 @@ const BlogTemplate = ({ pageContext: { title }, data }) => {
     <>
       <Seo
         title={data.strapiBlog.title}
-        description={data.strapiBlog.desc}
+        description={data.strapiBlog.content}
         image={data.strapiBlog.image.publicURL}
       />
       <main className="section blog-template-page">
@@ -33,7 +33,7 @@ const BlogTemplate = ({ pageContext: { title }, data }) => {
           src={data.strapiBlog.image.localFile.publicURL}
           alt={title}
         />
-        <p className="blog-page-desc">{data.strapiBlog.desc}</p>
+        <p className="blog-page-desc">{data.strapiBlog.content}</p>
       </main>
     </>
   )
@@ -42,7 +42,7 @@ const BlogTemplate = ({ pageContext: { title }, data }) => {
 export const query = graphql`
   query getSingleBlog($title: String) {
     strapiBlog(title: { eq: $title }) {
-      desc
+      content
       date
       author
       category

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Title from "../components/Title"
 import Seo from "../components/Seo"
+import { FaEnvelope, FaMobile } from "react-icons/fa"
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -29,7 +30,7 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState }),
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Your message has been sent successfully!"))
       .catch(error => alert(error))
 
     e.preventDefault()
@@ -58,6 +59,19 @@ const Contact = () => {
               data-netlify="true"
               onSubmit={handleSubmit}
             >
+              <div className="contact-details">
+                <div>
+                  <FaEnvelope className="contact-icon"></FaEnvelope>
+
+                  <a href="mailto: chiduong417@gmail.com">
+                    chiduong417@gmail.com
+                  </a>
+                </div>
+                <div>
+                  <FaMobile className="contact-icon"></FaMobile>
+                  <a href="tel:2405843783">240-584-3783</a>
+                </div>
+              </div>
               <input type="hidden" name="form-name" value="contact" />
               <div className="form-group">
                 <input

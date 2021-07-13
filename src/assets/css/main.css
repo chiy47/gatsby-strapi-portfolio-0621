@@ -486,7 +486,7 @@ About Page
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    column-gap: 4rem;
+    column-gap: 1rem;
   }
   .about-img {
     grid-column: 1 / span 5;
@@ -774,12 +774,33 @@ Contact Page
 .form-container button {
   text-transform: capitalize;
 }
-@media screen and (min-width: 768px) {
+.contact-details {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem;
+  background: var(--clr-grey-9);
+  justify-content: center;
+}
+.contact-details a {
+  font-size: 0.785rem;
+  color: var(--clr-grey-5);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  font-weight: 100;
+}
+.contact-details a:hover {
+  color: var(--clr-primary-5);
+}
+.contact-icon {
+  margin-right: 0.45rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 786px) {
   .contact-center {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    column-gap: 4rem;
   }
   .contact-img {
     grid-column: 1 / span 5;
